@@ -1,0 +1,21 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/instructions/commit.instructions.md"
+    }
+  ],
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": ".github/instructions/project-structure.instructions.md"
+    },
+    {
+      "file": "watchcat/.github/instructions/guidelines.instructions.md"
+    },
+    {
+      "file": "watchcat/.github/instructions/project-structure.instructions.md"
+    },
+    {
+      "file": "phdkit/.github/instructions/project-structure.instructions.md"
+    },
+  ]
+}
