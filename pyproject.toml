@@ -1,5 +1,10 @@
 [project]
 name = "watchcat-workspace"
+version = "0.1.0"
+
+[tool.uv.sources]
+phdkit = { workspace = true }
+watchcat = { workspace = true }
 
 [tool.uv.workspace]
 members = [
