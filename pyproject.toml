@@ -1,0 +1,8 @@
+[project]
+name = "watchcat-workspace"
+
+[tool.uv.workspace]
+members = [
+    "watchcat",
+    "phdkit",
+]
