@@ -1,0 +1,6 @@
+[submodule "watchcat"]
+	path = watchcat
+	url = https://github.com/cychen2021/watchcat.git
+[submodule "phdkit"]
+	path = phdkit
+	url = https://github.com/cychen2021/phdkit.git
