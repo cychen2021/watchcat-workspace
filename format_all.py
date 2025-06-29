@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "black",
+# ]
+# ///
 import tomllib
 import os
 import subprocess
@@ -14,7 +20,7 @@ if __name__ == '__main__':
     for subproject in subprojects:
         print(f"Formatting subproject: {subproject}")
         subprocess.run(
-            ["python", os.path.join(WORKSPACE_ROOT, subproject, "format.py")],
+            ["uv", "run", os.path.join(WORKSPACE_ROOT, subproject, "format.py")],
             check=True,
             stdout=sys.stdout,
             stderr=sys.stderr
