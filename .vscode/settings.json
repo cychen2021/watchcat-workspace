@@ -1,21 +1,22 @@
 {
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "file": ".github/instructions/commit.instructions.md"
+      "file": "copilot-instructions/commit.instructions.md"
     }
   ],
   "github.copilot.chat.codeGeneration.instructions": [
     {
-      "file": ".github/instructions/project-structure.instructions.md"
+      "file": "project-structure.instructions.md"
     },
     {
-      "file": "watchcat/.github/instructions/guidelines.instructions.md"
+      "file": "copilot-instructions/codegen-python.instructions.md",
+      "language": "python"
     },
     {
-      "file": "watchcat/.github/instructions/project-structure.instructions.md"
+      "file": "watchcat/project-structure.instructions.md"
     },
     {
-      "file": "phdkit/.github/instructions/project-structure.instructions.md"
+      "file": "phdkit/project-structure.instructions.md"
     },
   ],
   "files.exclude": {
