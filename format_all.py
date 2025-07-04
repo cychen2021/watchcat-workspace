@@ -1,7 +1,7 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
-#     "black",
+#     "ruff",
 # ]
 # ///
 import tomllib
@@ -25,3 +25,14 @@ if __name__ == '__main__':
             stdout=sys.stdout,
             stderr=sys.stderr
         )
+
+    print("Formatting Python files in the workspace root...")
+    python_files = list(map(lambda f: os.path.join(WORKSPACE_ROOT, f), [
+        f for f in os.listdir(WORKSPACE_ROOT) if f.endswith(".py")
+    ]))
+    subprocess.run(
+        ["uvx", "ruff", "format", *python_files],
+        check=True,
+        stdout=sys.stdout,
+        stderr=sys.stderr
+    )
