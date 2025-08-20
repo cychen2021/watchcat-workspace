@@ -2,12 +2,12 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "ruff",
+#     "sh",
 # ]
 # ///
 import tomllib
 import os
-import subprocess
-import sys
+import sh
 
 WORKSPACE_ROOT = os.path.realpath(os.path.dirname(__file__))
 
@@ -21,11 +21,10 @@ if __name__ == "__main__":
 
     for subproject in subprojects:
         print(f"Formatting subproject: {subproject}")
-        subprocess.run(
-            ["uv", "run", os.path.join(WORKSPACE_ROOT, subproject, "format.py")],
-            check=True,
-            stdout=sys.stdout,
-            stderr=sys.stderr,
+        sh.uvx(
+            "uv",
+            "run",
+            os.path.join(WORKSPACE_ROOT, subproject, "format.py"),
         )
 
     print("Formatting Python files in the workspace root...")
@@ -35,9 +34,4 @@ if __name__ == "__main__":
             [f for f in os.listdir(WORKSPACE_ROOT) if f.endswith(".py")],
         )
     )
-    subprocess.run(
-        ["uvx", "ruff", "format", *python_files],
-        check=True,
-        stdout=sys.stdout,
-        stderr=sys.stderr,
-    )
+    sh.uvx("ruff", "format", *python_files)
