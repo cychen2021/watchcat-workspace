@@ -43,5 +43,10 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.)|return )\\s*($TAGS)",
   "python.analysis.diagnosticSeverityOverrides": {
     "reportPrivateImportUsage": "information"
+  },
+  "markdownlint.config": {
+    "strong-style": {
+      "style": "consistent"
+    }
   }
 }
