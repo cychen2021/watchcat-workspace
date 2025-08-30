@@ -3,7 +3,7 @@ description: "Instructions for AI coding agents working in this repository"
 applyTo: "**"
 ---
 
-# copilot instructions for this repo
+# Copilot instructions for this repo
 
 Purpose: help AI coding agents become productive quickly in the watchcat workspace by
 documenting the big-picture architecture, key files, run/test workflows, and repository
